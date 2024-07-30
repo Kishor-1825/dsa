@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int factorial(int n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+int main() {
+    int num, i;
+    int sum = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    for (i = 1; i <= num; i++) {
+        sum += factorial(i);
+    }
+
+    printf("The sum of factorials up to %d is %d\n", num, sum);
+
+    return 0;
+}
